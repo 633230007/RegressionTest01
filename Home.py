@@ -18,7 +18,7 @@ lottie_hello = load_lottieurl(lottie_url_hello)
 lottie_download = load_lottieurl(lottie_url_download)
 
 st.header("นาย ธีรกานต์  คุ้มชุมแสง")
-st.header("รหัสนักศึกษา 633230007 หมู่เรียน 24.2")
+st.header("รหัสนักศึกษา 633230007 หมู่เรียน 24.2")
 st.balloons()
 
 
