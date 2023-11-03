@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score,mean_squared_error
 
-st.title("Index Price Prediction")
-st.header("Index Price Prediction from NPRU")
+st.title("Student Stress Factors")
+st.header("Student Stress Factors")
 
 df=pd.read_csv('./data/Student Stress Factors.csv')
 st.write(df.head(10))
