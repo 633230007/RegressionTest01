@@ -24,3 +24,6 @@ if st.button("Download"):
     with st_lottie_spinner(lottie_download, key="download"):
         time.sleep(5)
     st.balloons()
+    st.header("นาย ธีรกานต์  คุ้มชุมแสง")
+st.header("รหัสนักศึกษา 633230007 หมู่เรียน 24.2")
+st.balloons()
