@@ -14,8 +14,7 @@ st.write(df.head(10))
 
 #st.line_chart(df)
 #st.line_chart(df, x="Timestamp", y="Kindly Rate your Sleep Quality", color="Student Stress Factors")
-st.line_chart(
-   df, x="Timestamp", y=["Kindly Rate your Sleep Quality", "Student Stress Factors"], color=["#FF0000", "#0000FF"]  # Optional
+st.line_chart(df, x="Timestamp", y=["Kindly Rate your Sleep Quality", "Student Stress Factors"], color=["#FF0000", "#0000FF"]  # Optional
 )
 
 x=df[['Timestamp','Kindly Rate your Sleep Quality']]
