@@ -25,8 +25,8 @@ st.header("Student Stress Factors")
 df=pd.read_csv('./data/Factors.csv')
 st.write(df.head(10))
 
-x = df.iloc[:, :-1]  # ยกเว้นคอลัมน์สุดท้าย
-y = df.iloc[:, -1]   # คอลัมน์สุดท้ายเป็น target
+#x = df.iloc[:, :-1]  # ยกเว้นคอลัมน์สุดท้าย
+#y = df.iloc[:, -1]   # คอลัมน์สุดท้ายเป็น target
 
 st.line_chart(df)
 #st.line_chart(df, x="Kindly Rate Sleep Quality", y=["How many time a week do you suffer headaches"], color=["Student Stress Factors"])
@@ -46,16 +46,16 @@ x_test = sc.transform(x_test)
 Dtmodel = DecisionTreeClassifier(criterion='gini')
 Dtmodel.fit(x_train, y_train)
 
-x1=st.number_input("กรุณาป้อนข้อมูล Sleep Quality:")
-x2=st.number_input("กรุณาป้อนข้อมูล headaches:")
-x3=st.number_input("กรุณาป้อนข้อมูล academic performance:")
-x4=st.number_input("กรุณาป้อนข้อมูล study load:")
-x5=st.number_input("กรุณาป้อนข้อมูล extracurricular activities:")
-x6=st.number_input("กรุณาป้อนข้อมูล stress levels:")
+x1 = st.number_input("กรุณาป้อนข้อมูล Sleep Quality:")
+x2 = st.number_input("กรุณาป้อนข้อมูล headaches:")
+x3 = st.number_input("กรุณาป้อนข้อมูล academic performance:")
+x4 = st.number_input("กรุณาป้อนข้อมูล study load:")
+x5 = st.number_input("กรุณาป้อนข้อมูล extracurricular activities:")
+x6 = st.number_input("กรุณาป้อนข้อมูล stress levels:")
 
 if st.button("พยากรณ์ข้อมูล"):
     x_input = [[x1, x2, x3, x4, x5, x6]]
-    y_predict = Dtmodel.predict(pf.fit_transform(x_input))
+    y_predict = Dtmodel.predict(x_input)
     st.write(y_predict)
     st.button("ไม่พยากรณ์ข้อมูล")
 else:
