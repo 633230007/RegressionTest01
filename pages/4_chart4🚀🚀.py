@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import r2_score,mean_squared_error
+from sklearn.model_selection import train_test_split
 
 st.title("Student Stress Factors")
 st.header("Student Stress Factors")
@@ -26,7 +27,7 @@ y = df.iloc[:, -1]   # คอลัมน์สุดท้ายเป็น ta
 #pf=PolynomialFeatures(degree=3)
 #x_poly=pf.fit_transform(x)
 
-x_train, x_test, y_train, y_test = train_test_split(x_poly, y, test_size=0.2, random_state=1)
+x_train, x_test, y_train, y_test = train_test_split(x_poly, y, test_size=0.2, random_state=0)
 sc = StandardScaler()
 x_train = sc.fit_transform(x_train)
 x_test = sc.transform(x_test)
