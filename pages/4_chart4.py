@@ -28,7 +28,7 @@ st.write(df.head(10))
 x = df.iloc[:, :-1]  # ยกเว้นคอลัมน์สุดท้าย
 y = df.iloc[:, -1]   # คอลัมน์สุดท้ายเป็น target
 
-#st.line_chart(df)
+st.line_chart(df)
 #st.line_chart(df, x="Kindly Rate your Sleep Quality", y=["How would you rate your stress levels"], color=["Student Stress Factors"])
 #st.line_chart(df, x="Kindly Rate your Sleep Quality", "How many times a week do you suffer headaches", "How would you rate you academic performance", "how would you rate your study load", "How many times a week you practice extracurricular activities"  y=["How would you rate your stress levels", "Student Stress Factors"], color=["#FF0000", "#0000FF"])
 
