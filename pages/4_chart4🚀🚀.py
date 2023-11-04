@@ -32,7 +32,7 @@ y = df.iloc[:, -1]   # คอลัมน์สุดท้ายเป็น ta
 
 st.line_chart(df)
 #st.line_chart(df, x="Kindly Rate Sleep Quality", y=["How many time a week do you suffer headaches"], color=["Student Stress Factors"])
-st.line_chart(df, x=["Kindly Rate Sleep Quality"], y=["How many time a week do you suffer headaches", "Student Stress Factors"], color=["#FF0000", "#0000FF"])
+st.line_chart(df, x="Kindly Rate Sleep Quality", y=["How many time a week do you suffer headaches", "Student Stress Factors"], color=["#FF0000", "#0000FF"])
 
 #x=df[['Kindly Rate your Sleep Quality', 'How many times a week do you suffer headaches']]
 #y=df['Student Stress Factors']
