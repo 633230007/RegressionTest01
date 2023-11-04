@@ -4,6 +4,8 @@ from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import r2_score,mean_squared_error
 
 st.title("Student Stress Factors")
@@ -19,10 +21,10 @@ y = df.iloc[:, -1]   # คอลัมน์สุดท้ายเป็น ta
 #st.line_chart(df, x="Sleep Quality", y="headaches", color="Student Stress Factors")
 #st.line_chart(df, x="Sleep Quality", y=["headaches", "Student Stress Factors"], color=["#FF0000", "#0000FF"])
 
-x=df[['Kindly Rate your Sleep Quality','How many times a week do you suffer headaches']]
-y=df['Student Stress Factors']
-pf=PolynomialFeatures(degree=3)
-x_poly=pf.fit_transform(x)
+#x=df[['Kindly Rate your Sleep Quality','How many times a week do you suffer headaches']]
+#y=df['Student Stress Factors']
+#pf=PolynomialFeatures(degree=3)
+#x_poly=pf.fit_transform(x)
 
 x_train, x_test, y_train, y_test = train_test_split(x_poly, y, test_size=0.2, random_state=1)
 sc = StandardScaler()
@@ -31,6 +33,7 @@ x_test = sc.transform(x_test)
 
 modelDtree=DecisionTreeClassifier(criterion='gini')
 modelDtree.fit(x_train, y_train)
+
 x1=st.number_input("กรุณาป้อนข้อมูล Sleep Quality:")
 x2=st.number_input("กรุณาป้อนข้อมูล headaches:")
 x3=st.number_input("กรุณาป้อนข้อมูล academic performance:")
