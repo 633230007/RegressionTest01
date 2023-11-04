@@ -6,15 +6,13 @@ from sklearn.preprocessing import PolynomialFeatures
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.tree import DecisionTreeClassifier
+
 from sklearn.metrics import r2_score,mean_squared_error
 from sklearn.model_selection import train_test_split
 
-from sklearn.tree import DecisionTreeClassifier          # Import Decision Tree Classifier
-from sklearn.naive_bayes import GaussianNB              # Import GaussianNB
-from sklearn.neighbors import KNeighborsClassifier       # Import KNN
-from sklearn.model_selection import train_test_split    # Import train_test_split function
-from sklearn.preprocessing import StandardScaler
+from sklearn.tree import DecisionTreeClassifier         
+from sklearn.naive_bayes import GaussianNB              
+from sklearn.neighbors import KNeighborsClassifier       
 
 from sklearn import metrics
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score    # Import measure performance function
