@@ -32,7 +32,7 @@ sc = StandardScaler()
 x_train = sc.fit_transform(x_train)
 x_test = sc.transform(x_test)
 
-Dtmodel=DecisionTreeClassifier(criterion='gini')
+Dtmodel = DecisionTreeClassifier(criterion='gini')
 Dtmodel.fit(x_train, y_train)
 
 x1=st.number_input("กรุณาป้อนข้อมูล Sleep Quality:")
@@ -43,8 +43,8 @@ x5=st.number_input("กรุณาป้อนข้อมูล extracurricula
 x6=st.number_input("กรุณาป้อนข้อมูล stress levels:")
 
 if st.button("พยากรณ์ข้อมูล"):
-    x_input=[[x1, x2, x3, x4, x5, x6]]
-    y_predict=Dtmodel.predict(pf.fit_transform(x_input))
+    x_input = [[x1, x2, x3, x4, x5, x6]]
+    y_predict = Dtmodel.predict(pf.fit_transform(x_input))
     st.write(y_predict)
     st.button("ไม่พยากรณ์ข้อมูล")
 else:
