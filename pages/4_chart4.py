@@ -31,7 +31,7 @@ y = df.iloc[:, -1]   # คอลัมน์สุดท้ายเป็น ta
 #st.line_chart(df)
 #st.line_chart(df, x="Kindly Rate your Sleep Quality", y=["How would you rate your stress levels"], color=["Student Stress Factors"])
 
-#st.line_chart(df, x="Kindly Rate your Sleep Quality", "How many times a week do you suffer headaches", "How would you rate you academic performance", "how would you rate your study load", "How many times a week you practice extracurricular activities"  y=["How would you rate your stress levels", "Student Stress Factors"], color=["#FF0000", "#0000FF"])
+st.line_chart(df, x="Kindly Rate your Sleep Quality", "How many times a week do you suffer headaches", "How would you rate you academic performance", "how would you rate your study load", "How many times a week you practice extracurricular activities"  y=["How would you rate your stress levels", "Student Stress Factors"], color=["#FF0000", "#0000FF"])
 
 
 #x = df[["Sleep Quality", "headaches", "academic performance", "study load", "extracurricular activities"]]
@@ -50,8 +50,8 @@ sc = StandardScaler()
 x_train = sc.fit_transform(x_train)
 x_test = sc.transform(x_test)
 
-Dtmodel = DecisionTreeClassifier(criterion='gini')
-Dtmodel.fit(x_train, y_train)
+DTmodel = DecisionTreeClassifier(criterion='gini')
+DTmodel.fit(x_train, y_train)
 
 x1 = st.number_input("กรุณาป้อนข้อมูล Sleep Quality:")
 x2 = st.number_input("กรุณาป้อนข้อมูล headaches:")
@@ -62,7 +62,7 @@ x6 = st.number_input("กรุณาป้อนข้อมูล stress level
 
 if st.button("พยากรณ์ข้อมูล"):
     x_input = [[x1, x2, x3, x4, x5, x6]]
-    y_predict = Dtmodel.predict(x_input)
+    y_predict = DTmodel.predict(x_input)
     st.write(y_predict)
     st.button("ไม่พยากรณ์ข้อมูล")
 else:
