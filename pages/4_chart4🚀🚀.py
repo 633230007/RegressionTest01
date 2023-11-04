@@ -29,11 +29,11 @@ x = df.iloc[:, :-1]  # ยกเว้นคอลัมน์สุดท้า
 y = df.iloc[:, -1]   # คอลัมน์สุดท้ายเป็น target
 
 #st.line_chart(df)
-#st.line_chart(df, x="Kindly Rate Sleep Quality", y=["How would you rate your stress levels"], color=["Student Stress Factors"])
-#st.line_chart(df, x="Kindly Rate Sleep Quality", "How many times a week do you suffer headaches", "How would you rate you academic performance", "how would you rate your study load", "How many times a week you practice extracurricular activities"  y=["How would you rate your stress levels", "Student Stress Factors"], color=["#FF0000", "#0000FF"])
+#st.line_chart(df, x="Kindly Rate your Sleep Quality", y=["How would you rate your stress levels"], color=["Student Stress Factors"])
+#st.line_chart(df, x="Kindly Rate your Sleep Quality", "How many times a week do you suffer headaches", "How would you rate you academic performance", "how would you rate your study load", "How many times a week you practice extracurricular activities"  y=["How would you rate your stress levels", "Student Stress Factors"], color=["#FF0000", "#0000FF"])
 
 
-x = df[["Kindly Rate Sleep Quality", "How many times a week do you suffer headaches", "How would you rate you academic performance", "how would you rate your study load", "How many times a week you practice extracurricular activities"]]
+x = df[["Kindly Rate your Sleep Quality", "How many times a week do you suffer headaches", "How would you rate you academic performance", "how would you rate your study load", "How many times a week you practice extracurricular activities"]]
 y = df["How would you rate your stress levels"]
 #pf = PolynomialFeatures(degree=3)
 #x_poly = pf.fit_transform(x)
