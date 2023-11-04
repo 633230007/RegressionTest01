@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 import matplotlib.pyplot as plt
@@ -8,7 +9,17 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import r2_score,mean_squared_error
 from sklearn.model_selection import train_test_split
+
+from sklearn.tree import DecisionTreeClassifier          # Import Decision Tree Classifier
+from sklearn.naive_bayes import GaussianNB              # Import GaussianNB
+from sklearn.neighbors import KNeighborsClassifier       # Import KNN
+from sklearn.model_selection import train_test_split    # Import train_test_split function
 from sklearn.preprocessing import StandardScaler
+
+from sklearn import metrics
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score    # Import measure performance function
+from sklearn.metrics import classification_report, confusion_matrix
+
 
 st.title("Student Stress Factors")
 st.header("Student Stress Factors")
