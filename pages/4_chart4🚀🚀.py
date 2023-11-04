@@ -33,10 +33,10 @@ y = df.iloc[:, -1]   # คอลัมน์สุดท้ายเป็น ta
 #st.line_chart(df, x="Kindly Rate Sleep Quality", "How many times a week do you suffer headaches", "How would you rate you academic performance", "how would you rate your study load", "How many times a week you practice extracurricular activities"  y=["How would you rate your stress levels", "Student Stress Factors"], color=["#FF0000", "#0000FF"])
 
 
-x=df[["Kindly Rate Sleep Quality", "How many times a week do you suffer headaches", "How would you rate you academic performance", "how would you rate your study load", "How many times a week you practice extracurricular activities"]]
-y=df["How would you rate your stress levels"]
-#pf=PolynomialFeatures(degree=3)
-#x_poly=pf.fit_transform(x)
+x = df[["Kindly Rate Sleep Quality", "How many times a week do you suffer headaches", "How would you rate you academic performance", "how would you rate your study load", "How many times a week you practice extracurricular activities"]]
+y = df["How would you rate your stress levels"]
+#pf = PolynomialFeatures(degree=3)
+#x_poly = pf.fit_transform(x)
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=1)
 
