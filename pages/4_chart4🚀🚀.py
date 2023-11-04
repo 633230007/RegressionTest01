@@ -19,7 +19,7 @@ y = df.iloc[:, -1]   # คอลัมน์สุดท้ายเป็น ta
 #st.line_chart(df, x="Sleep Quality", y="headaches", color="Student Stress Factors")
 #st.line_chart(df, x="Sleep Quality", y=["headaches", "Student Stress Factors"], color=["#FF0000", "#0000FF"])
 
-x=df[['Sleep Quality','headaches']]
+x=df[['Kindly Rate your Sleep Quality','How many times a week do you suffer headaches']]
 y=df['Student Stress Factors']
 pf=PolynomialFeatures(degree=3)
 x_poly=pf.fit_transform(x)
