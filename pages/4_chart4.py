@@ -22,7 +22,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 st.title("Student Stress Factors")
 st.header("Student Stress Factors")
 
-df=pd.read_csv('./data/Factors.csv')
+df=pd.read_csv('./data/Factors1.csv')
 st.write(df.head(10))
 
 x = df.iloc[:, :-1]  # ยกเว้นคอลัมน์สุดท้าย
