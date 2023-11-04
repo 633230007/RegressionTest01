@@ -36,9 +36,6 @@ y = df.iloc[:, -1]   # คอลัมน์สุดท้ายเป็น ta
 x = df[["Timestamp", "Sleep Quality", "headaches", "academic performance", "study load", "extracurricular activities"]]
 y = df["stress levels"]
 
-#Timestamp, Kindly Rate your Sleep Quality, How many times a week do you suffer headaches, How would you rate you academic performance, how would you rate your study load, How many times a week you practice extracurricular activities, How would you rate your stress levels
-
-
 
 #pf = PolynomialFeatures(degree=3)
 #x_poly = pf.fit_transform(x)
