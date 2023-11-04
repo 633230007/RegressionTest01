@@ -17,7 +17,7 @@ y = df.iloc[:, -1]   # คอลัมน์สุดท้ายเป็น ta
 
 #st.line_chart(df)
 #st.line_chart(df, x="Sleep Quality", y="headaches", color="Student Stress Factors")
-st.line_chart(df, x="Sleep Quality", y=["headaches", "Student Stress Factors"], color=["#FF0000", "#0000FF"])
+#st.line_chart(df, x="Sleep Quality", y=["headaches", "Student Stress Factors"], color=["#FF0000", "#0000FF"])
 
 x=df[['Sleep Quality','headaches']]
 y=df['Student Stress Factors']
