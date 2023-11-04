@@ -29,10 +29,10 @@ st.write(df.head(10))
 #y = df.iloc[:, -1]   # คอลัมน์สุดท้ายเป็น target
 
 st.line_chart(df)
-#st.line_chart(df, x="Kindly Rate Sleep Quality", y=["How many time a week do you suffer headaches"], color=["Student Stress Factors"])
-#st.line_chart(df, x="Kindly Rate Sleep Quality", y=["How many time a week do you suffer headaches", "Student Stress Factors"], color=["#FF0000", "#0000FF"])
+#st.line_chart(df, x="Kindly Rate Sleep Quality", y=["How would you rate your stress levels"], color=["Student Stress Factors"])
+#st.line_chart(df, x="Kindly Rate Sleep Quality", y=["How would you rate your stress levels", "Student Stress Factors"], color=["#FF0000", "#0000FF"])
 
-#x=df[['Kindly Rate your Sleep Quality', 'How many times a week do you suffer headaches']]
+#x=df[['Kindly Rate your Sleep Quality', 'How would you rate your stress levels']]
 #y=df['Student Stress Factors']
 #pf=PolynomialFeatures(degree=3)
 #x_poly=pf.fit_transform(x)
