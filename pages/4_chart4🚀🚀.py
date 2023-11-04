@@ -36,7 +36,7 @@ y = df.iloc[:, -1]   # คอลัมน์สุดท้ายเป็น ta
 x = df[["Timestamp", "Kindly Rate your Sleep Quality", "How many times a week do you suffer headaches", "How would you rate you academic performance", "how would you rate your study load", "How many times a week you practice extracurricular activities"]]
 y = df["How would you rate your stress levels"]
 
-Timestamp, Kindly Rate your Sleep Quality, How many times a week do you suffer headaches, How would you rate you academic performance, how would you rate your study load, How many times a week you practice extracurricular activities, How would you rate your stress levels
+#Timestamp, Kindly Rate your Sleep Quality, How many times a week do you suffer headaches, How would you rate you academic performance, how would you rate your study load, How many times a week you practice extracurricular activities, How would you rate your stress levels
 
 
 
