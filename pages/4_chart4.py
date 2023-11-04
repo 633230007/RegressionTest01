@@ -25,8 +25,8 @@ st.header("Student Stress Factors")
 df=pd.read_csv('./data/Factors.csv')
 st.write(df.head(10))
 
-#x = df.iloc[:, :-1]  # ยกเว้นคอลัมน์สุดท้าย
-#y = df.iloc[:, -1]   # คอลัมน์สุดท้ายเป็น target
+x = df.iloc[:, :-1]  # ยกเว้นคอลัมน์สุดท้าย
+y = df.iloc[:, -1]   # คอลัมน์สุดท้ายเป็น target
 
 #st.line_chart(df)
 #st.line_chart(df, x="Kindly Rate your Sleep Quality", y=["How would you rate your stress levels"], color=["Student Stress Factors"])
@@ -41,8 +41,8 @@ st.write(df.head(10))
 #pf = PolynomialFeatures(degree=3)
 #x_poly = pf.fit_transform(x)
 
-x=df.iloc[:, 0:8]
-y=y = df['class']
+#x=df.iloc[:, 0:8]
+#y=y = df['class']
 
 x_train,x_test,y_train,y_test =train_test_split(x,y,test_size=0.3,random_state=1)
 
