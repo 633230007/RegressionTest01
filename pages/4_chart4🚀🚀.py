@@ -27,7 +27,7 @@ y = df.iloc[:, -1]   # คอลัมน์สุดท้ายเป็น ta
 #pf=PolynomialFeatures(degree=3)
 #x_poly=pf.fit_transform(x)
 
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=0)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=1)
 sc = StandardScaler()
 x_train = sc.fit_transform(x_train)
 x_test = sc.transform(x_test)
